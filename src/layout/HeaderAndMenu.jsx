@@ -44,7 +44,7 @@ import { useState } from 'react';
 const drawerWidth = 224;
 
 export default function HeaderAndMenu() {
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedItem, setSelectedItem] = useState('Payments');
 
   const handleItemClick = (text) => {
     setSelectedItem(text);
