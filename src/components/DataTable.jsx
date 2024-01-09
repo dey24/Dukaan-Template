@@ -11,6 +11,7 @@ import IconButton from '@mui/material/IconButton';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Grid, Typography } from '@mui/material';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
 function createData(id, orderDate, orderAmount, transaction, ) {
   return { id, orderDate, orderAmount, transaction, };
@@ -71,12 +72,13 @@ export default function DataTable() {
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
-          <TableRow>
+          <TableRow sx={{backgroundColor:'#F2F2F2'}}>
             <TableCell>Order ID</TableCell>
             {/* <TableCell align="right">OrderID</TableCell> */}
-            <TableCell align="center">Order date&nbsp;(g)</TableCell>
-            <TableCell align="right">Order amount&nbsp;(g)</TableCell>
-            <TableCell align="right">Transaction Fees&nbsp;(g)</TableCell>
+            <TableCell align="center">Order date&nbsp;</TableCell>
+            <TableCell align="right">Order amount&nbsp;</TableCell>
+            
+            <TableCell align="right"><Grid sx={{display:'flex', alignItems:'center', justifyContent:'flex-end'}}>Transaction Fees&nbsp; <InfoOutlinedIcon sx={{width:'14px', height:'14px'}}/></Grid></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
