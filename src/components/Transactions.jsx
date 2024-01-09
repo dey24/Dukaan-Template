@@ -14,17 +14,17 @@ const Transactions = () => {
             <Grid item sx={{marginTop:'20px'}}>
                 <SearchAppBar placeholder="Search by Order ID..." width={'100%'} maxWidth={'248px'} backgroundColor={"#FFFFFF"} border={'0.2px solid #D9D9D9'}/>
             </Grid>
-            <Grid item sx={{display:'flex', alignItems: 'center', justifyContent:'space-between', gap:'12px', paddingRight:'12px'}}>
-                <Grid sx={{display:'flex', alignItems: 'center', justifyContent:'center', border:'1px solid #D9D9D9', borderRadius:'4px', padding:'6px 12px'}}>
+            <Grid item sx={{display:'flex', alignItems: 'center', gap:'12px', paddingRight:'12px'}}>
+                <Grid sx={{display:'flex', alignItems: 'center', justifyContent:'center', border:'1px solid #D9D9D9', borderRadius:'4px', padding:'0px 12px'}}>
                     <Grid item>
                         <Typography sx={{color: '#4D4D4D',fontSize:'16px', fontFamily:'Inter, sans-serif', fontWeight:'400', lineHeight:'24px', fontStyle:'normal'}}>Sort</Typography>
                     </Grid>
                     <Grid item marginTop={'5px'}>
-                        <SwapVertIcon sx={{color:'#4D4D4D', height:"18px", width:'18px'}}/>
+                        <SwapVertIcon sx={{color:'#4D4D4D'}}/>
                     </Grid>
                 </Grid>
-                <Grid sx={{ border:'1px solid #D9D9D9', padding:'6px 12px',  borderRadius:'4px'}}>
-                    <DownloadIcon />
+                <Grid sx={{ border:'1px solid #D9D9D9', padding:'6px 12px',  borderRadius:'4px', display:'flex', alignItems:'center'}}>
+                    <DownloadIcon/>
                 </Grid>
             </Grid>
         </Grid>

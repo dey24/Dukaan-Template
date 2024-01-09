@@ -77,13 +77,13 @@ export default function HeaderAndMenu() {
                 </Grid>
                 <Grid item sx={{marginLeft:'16px'}}>
                   <Typography fontSize="12px" sx={{display:'flex', alignItems:'center', color:'#1A181E'}}>
-                      <HelpOutlineIcon sx={{fontSize:14}}/> <Typography fontSize="12px" sx={{marginLeft:'6px'}}>How it works</Typography>
+                      <HelpOutlineIcon sx={{fontSize:14}}/> <Typography  sx={{marginLeft:'6px', fontSize: { xs: 12, md: 14 }}}>How it works</Typography>
                   </Typography>   
                 </Grid>
               </Grid>
             </Grid>
 
-            <Grid item sx={{marginRight:'100px'}}>
+            <Grid item>
                 <SearchBar placeholder={"Search features, tutorials, etc."} width={"100%"} minWidth={'400px'} backgroundColor="#F2F2F2"/>
             </Grid>
 
