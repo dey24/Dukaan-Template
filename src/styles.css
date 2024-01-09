@@ -1,0 +1,15 @@
+/* styles.css */
+
+.header-gray {
+  background-color: #F2F2F2;
+  /* Add any other styling you want for the header */
+}
+
+.MuiDataGrid-columnHeaderTitle {
+  font-size: 20px !important; /* Adjust the font size as needed */
+  color:#4D4D4D;
+}
+
+.MuiTablePagination-toolbar{
+    margin-right: 50rem;
+}
