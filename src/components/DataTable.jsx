@@ -89,7 +89,7 @@ export default function DataTable() {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.id}
+                <Typography sx={{color:'#146EB4', textDecoration:'underline'}}>{row.id}</Typography>
               </TableCell>
               <TableCell align="center">{row.orderDate}</TableCell>
               <TableCell align="right">{row.orderAmount}</TableCell>
