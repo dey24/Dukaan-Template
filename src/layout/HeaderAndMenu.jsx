@@ -15,7 +15,6 @@ import ListItemText from '@mui/material/ListItemText';
 import logo3 from "../assets/logo3.jpeg";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SearchBar from '../components/SearchBar.jsx'
-
 //icons
 import HomeIcon from '@mui/icons-material/Home';
 import ListAltIcon from '@mui/icons-material/ListAlt';
@@ -39,11 +38,17 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Overview from '../components/Overview.jsx';
 import Transactions from '../components/Transactions.jsx';
 import DataTable from '../components/DataTable.jsx';
+import { useState } from 'react';
 
 
 const drawerWidth = 224;
 
 export default function HeaderAndMenu() {
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const handleItemClick = (text) => {
+    setSelectedItem(text);
+  };
 
   const icons = [
   <HomeIcon key={1} sx={{color:'#FFFFFF'}}/>,
@@ -135,8 +140,8 @@ export default function HeaderAndMenu() {
         <Divider />
         <List>
           {['Home', 'Orders', 'Products', 'Delivery', 'Marketing', 'Analytics', 'Payments', 'Tools', 'Discounts', 'Audience','Appearance','Plugins'].map((text, index) => (
-            <ListItem key={text} sx={{padding:'0 0'}}>
-              <ListItemButton>
+            <ListItem key={text} sx={{padding:'0 0', backgroundColor: selectedItem === text ? '#353C53' : 'inherit', borderRadius:'4px'}}>
+              <ListItemButton onClick={() => handleItemClick(text)}>
                 <ListItemIcon sx={{minWidth:'35px'}}>
                   {/* {index % 2 === 0 ? <InboxIcon sx={{color: '#FFFFFF'}}/> : <MailIcon sx={{color: '#FFFFFF'}}/>} */}
                   {icons[index]}
